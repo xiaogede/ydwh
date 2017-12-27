@@ -14,3 +14,21 @@ var swiper = new Swiper('.swiper-container', {
         }
     }
 });
+var music=document.getElementById("music");
+var imgcbg=document.querySelectorAll(".imgcbg")[0];
+var imgImg=document.querySelectorAll(".imgImg")[0];
+var audio=document.querySelector("audio");
+var flog=1;
+music.onclick=function(){
+    if(flog==1){
+        imgcbg.style.display="none";
+        imgImg.style.animation="none";
+        audio.pause();
+        flog=0;
+    }else {
+        imgcbg.style.display="block";
+        imgImg.style.animation="music 1s infinite linear";
+        audio.play();
+        flog=1
+    }
+};

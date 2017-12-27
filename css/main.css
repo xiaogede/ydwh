@@ -37,9 +37,10 @@ body {
     background-size: 100% 100%;
 }
 .swiper-slide.one .top{
-    background-size: 100% 100%;
+    width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom:0;
+    left: -30%;
 }
 .swiper-slide.two{
     background: url("../img/bg2.jpg");
@@ -68,4 +69,29 @@ body {
 }
 .swiper-slide.two .text .bottom{
     float: right;;
+}
+#music{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 3%;
+    top: 2%;
+    z-index: 9;
+}
+
+#music .imgcbg{
+    width: 60px;
+    height: 60px;
+}
+#music .imgImg{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    animation: music 1s infinite linear;
+}
+@keyframes music{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{transform: rotate(360deg)}
 }
